@@ -1,3 +1,3 @@
 # dotfiles
-PHKLIVE Personal dotfiles
-# dotfiles
+
+My personal .config
