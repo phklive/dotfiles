@@ -7,9 +7,7 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons", "DaikyXendo/nvim-material-icon" },
   config = function()
     local nvimtree = require("nvim-tree")
-    require("nvim-web-devicons").setup {
-      override = require("nvim-material-icon").get_icons(),
-    }
+    require("nvim-web-devicons").setup({})
 
     -- recommended settings from nvim-tree documentation
     vim.g.loaded_netrw = 1

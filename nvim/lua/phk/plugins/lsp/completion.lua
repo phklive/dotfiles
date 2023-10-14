@@ -4,6 +4,10 @@ return {
   event = 'InsertEnter',
   dependencies = {
     { 'L3MON4D3/LuaSnip' },
+    "hrsh7th/cmp-nvim-lsp-signature-help", -- signature help
+    "onsails/lspkind.nvim",                -- vs-code like pictograms
+    "hrsh7th/cmp-buffer",                  -- source for text in buffer
+    "hrsh7th/cmp-path",                    -- source for path
   },
   config = function()
     -- Here is where you configure the autocompletion settings.
@@ -14,6 +18,23 @@ return {
     local cmp_action = lsp_zero.cmp_action()
     cmp.setup({
       formatting = lsp_zero.cmp_format(),
+      -- formatting = {
+      --   fields = { 'abbr', 'kind', 'menu' },
+      --   format = require('lspkind').cmp_format({
+      --     mode = 'symbol',       -- show only symbol annotations
+      --     maxwidth = 50,         -- prevent the popup from showing more than provided characters
+      --     ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
+      --   })
+      -- },
+
+      sources = {
+        { name = "nvim_lsp_signature_help" }, -- signature help
+        { name = "nvim_lsp" },                -- lsp
+        { name = "luasnip" },                 -- snippets
+        { name = "buffer" },                  -- text within current buffer
+        { name = "path" },                    -- file system paths
+        { name = "crates" },                  -- file system paths
+      },
       mapping = {
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
         ['<Tab>'] = cmp_action.luasnip_supertab(),
