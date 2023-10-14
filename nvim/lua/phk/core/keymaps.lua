@@ -16,3 +16,9 @@ keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true }
 keymap.set('n', '<leader>v', '<C-w>v')
 keymap.set('n', '<leader>h', '<C-w>s')
 keymap.set('n', '<leader>x', ':close<CR>')
+
+-- Tmux navigation
+keymap.set('n', '<C-j>', '<cmd> TmuxNavigateDown<CR>')
+keymap.set('n', '<C-k>', '<cmd> TmuxNavigateUp<CR>')
+keymap.set('n', '<C-h>', '<cmd> TmuxNavigateLeft<CR>')
+keymap.set('n', '<C-l>', '<cmd> TmuxNavigateRight<CR>')
