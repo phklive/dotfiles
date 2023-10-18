@@ -11,6 +11,11 @@ return {
     local lsp_zero = require('lsp-zero')
     lsp_zero.extend_lspconfig()
 
+    vim.diagnostic.config({
+      virtual_text = false,
+      severity_sort = true,
+    })
+
     -- Require rust_tools
     local rust_tools = require('rust-tools')
 
