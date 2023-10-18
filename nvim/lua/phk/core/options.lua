@@ -23,7 +23,7 @@ vim.wo.relativenumber = true
 vim.o.so = 999
 
 -- Enable mouse mode
-vim.o.mouse = 'a'
+-- vim.o.mouse = 'a'
 
 -- Enable break indent
 vim.o.breakindent = true

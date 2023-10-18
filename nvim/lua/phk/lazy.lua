@@ -17,7 +17,6 @@ require("lazy").setup({
   { import = "phk.plugins" },
   { import = "phk.plugins.lsp" }
 }, {
-  install = { missing = true, colorscheme = { "catppuccin" } },
   checker = { enabled = true, notify = false },
   change_detection = { notify = false },
   performance = {

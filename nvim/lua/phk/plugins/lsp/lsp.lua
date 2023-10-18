@@ -11,13 +11,6 @@ return {
     local lsp_zero = require('lsp-zero')
     lsp_zero.extend_lspconfig()
 
-    lsp_zero.set_sign_icons({
-      error = '✘',
-      warn = '▲',
-      hint = '⚑',
-      info = '»'
-    })
-
     -- Require rust_tools
     local rust_tools = require('rust-tools')
 
