@@ -4,7 +4,7 @@ vim.opt.background = "dark" -- colorschemes that can be light or dark will be ma
 vim.opt.signcolumn = "yes"  -- show sign column so that text doesn't shift
 
 -- tabs & indentation
-vim.opt.tabstop = 2       -- 2 spaces for tabs (prettier default)
+vim.opt.tabstop = 2       -- 2 spaces for tabs
 vim.opt.shiftwidth = 2    -- 2 spaces for indent width
 vim.opt.expandtab = true  -- expand tab to spaces
 vim.opt.autoindent = true -- copy indent from current line when starting new one
@@ -13,17 +13,11 @@ vim.opt.autoindent = true -- copy indent from current line when starting new one
 vim.opt.wrap = false -- disable line wrapping
 
 -- Set highlight on search
-vim.o.hlsearch = true
+vim.o.hlsearch = false
 
 -- Make line numbers default
 vim.wo.number = true
 vim.wo.relativenumber = true
-
--- keep cursor centered
-vim.o.so = 999
-
--- Enable mouse mode
--- vim.o.mouse = 'a'
 
 -- Enable break indent
 vim.o.breakindent = true
@@ -36,9 +30,9 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Decrease update time
-vim.o.updatetime = 500
+vim.o.updatetime = 300
 vim.o.timeout = true
-vim.o.timeoutlen = 500
+vim.o.timeoutlen = 300
 
 -- backspace
 vim.opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
