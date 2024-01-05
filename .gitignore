@@ -1,1 +1,4 @@
 tmux/plugins
+.nvim/
+raycast/
+iterm2/AppSupport

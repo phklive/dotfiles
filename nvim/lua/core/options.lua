@@ -15,6 +15,9 @@ vim.opt.wrap = false -- disable line wrapping
 -- Set highlight on search
 vim.o.hlsearch = false
 
+-- keep cursor centered
+vim.o.so = 30
+
 -- Make line numbers default
 vim.wo.number = true
 vim.wo.relativenumber = true
