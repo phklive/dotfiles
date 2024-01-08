@@ -54,7 +54,7 @@ return {
           rust_analyzer = function()
             rust_tools.setup({
               server = {
-                filetypes = { "rust", "toml" },
+                filetypes = { "rust" },
               },
             })
           end,

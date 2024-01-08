@@ -1,5 +1,6 @@
 return {
-    'nvim-telescope/telescope.nvim', branch = '0.1.x',
+  "nvim-telescope/telescope.nvim",
+  branch = "0.1.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons",
@@ -7,7 +8,7 @@ return {
       "nvim-telescope/telescope-fzf-native.nvim",
       build = "make",
       cond = function()
-        return vim.fn.executable "make" == 1
+        return vim.fn.executable("make") == 1
       end,
     },
   },
@@ -21,18 +22,18 @@ return {
           i = {
             ["<C-k>"] = actions.move_selection_previous,
             ["<C-j>"] = actions.move_selection_next,
-            ["<esc>"] = actions.close
-          }
-        }
+            ["<esc>"] = actions.close,
+          },
+        },
       },
       pickers = {
         find_files = {
-          -- theme = "dropdown",
-        }
+          theme = "dropdown",
+        },
       },
     })
 
-    telescope.load_extension("fzf");
+    telescope.load_extension("fzf")
 
     -- set keymaps
     local keymap = vim.keymap
@@ -43,5 +44,5 @@ return {
     keymap.set("n", "<leader>fb", "<cmd>Telescope git_branches<cr>", { desc = "Fuzzy find branches" })
     keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
     keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<cr>", { desc = "Fuzzy find git" })
-  end
+  end,
 }
