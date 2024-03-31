@@ -28,7 +28,7 @@ return {
       },
       pickers = {
         find_files = {
-          theme = "dropdown",
+          -- theme = "dropdown",
         },
       },
     })
@@ -41,8 +41,8 @@ return {
     keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
     keymap.set("n", "<leader>f/", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
     keymap.set("n", "<leader>fw", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
-    keymap.set("n", "<leader>fb", "<cmd>Telescope git_branches<cr>", { desc = "Fuzzy find branches" })
     keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
-    keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<cr>", { desc = "Fuzzy find git" })
+    keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Fuzzy find vim buffers" })
+    keymap.set("n", "<leader>fg", "<cmd>Telescope git_branches<cr>", { desc = "Fuzzy find git branches" })
   end,
 }

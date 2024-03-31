@@ -23,6 +23,7 @@ return {
       vim.diagnostic.config({
         virtual_text = true,
         severity_sort = true,
+        underline = false,
       })
 
       -- Require rust_tools

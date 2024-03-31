@@ -6,7 +6,6 @@ return {
     require("null-ls").setup({
       sources = {
         null_ls.builtins.formatting.stylua,
-        null_ls.builtins.formatting.rustfmt,
       },
       vim.keymap.set("n", "<leader>fb", vim.lsp.buf.format, {}),
       -- you can reuse a shared lspconfig on_attach callback here

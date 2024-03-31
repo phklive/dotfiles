@@ -10,6 +10,9 @@ return {
         theme = "auto",
       },
       sections = {
+        lualine_a = {
+          { 'filename', path = 1 }
+        },
         lualine_x = {
           {
             lazy_status.updates,
