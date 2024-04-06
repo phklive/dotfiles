@@ -24,3 +24,6 @@ keymap.set("n", "<leader>nf", ":nohl<CR>")
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
+
+-- manage zen mode
+keymap.set("n", "<leader>tz", "<cmd>ZenMode | Pencil<cr>")
