@@ -26,4 +26,4 @@ keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- incremen
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 
 -- manage zen mode
-keymap.set("n", "<leader>tz", "<cmd>ZenMode | Pencil<cr>")
+keymap.set("n", "<leader>tz", "<cmd>ZenMode | PencilToggle<cr>")
