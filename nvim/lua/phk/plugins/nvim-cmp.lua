@@ -28,6 +28,7 @@ return {
 		cmp.setup({
 			completion = {
 				completeopt = "menu,menuone,preview,noselect",
+				max_item_count = 10,
 			},
 			snippet = { -- configure how nvim-cmp interacts with snippet engine
 				expand = function(args)
@@ -57,6 +58,12 @@ return {
 			-- configure lspkind for vs-code like pictograms in completion menu
 			formatting = {
 				format = lspkind.cmp_format({
+					before = function(_, vim_item)
+						if vim_item.menu ~= nil and string.len(vim_item.menu) > 0 then
+							vim_item.menu = string.sub(vim_item.menu, 1, 0) .. ""
+						end
+						return vim_item
+					end,
 					maxwidth = 50,
 					ellipsis_char = "...",
 				}),

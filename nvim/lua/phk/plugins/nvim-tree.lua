@@ -4,6 +4,17 @@ return {
 	config = function()
 		local nvimtree = require("nvim-tree")
 
+		-- change the icon for .toml files
+		require("nvim-web-devicons").setup({
+			override_by_extension = {
+				["toml"] = {
+					icon = "T",
+					color = "#987000",
+					name = "toml",
+				},
+			},
+		})
+
 		-- recommended settings from nvim-tree documentation
 		vim.g.loaded_netrw = 1
 		vim.g.loaded_netrwPlugin = 1
@@ -32,6 +43,7 @@ return {
 			-- window splits
 			actions = {
 				open_file = {
+					quit_on_open = true,
 					window_picker = {
 						enable = false,
 					},

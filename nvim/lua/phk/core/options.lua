@@ -38,6 +38,20 @@ opt.swapfile = false
 
 -- keep some lines at eof
 opt.scrolloff = 10
+-- Preview substitutions live, as you type!
+opt.inccommand = "split"
+
+-- Show which line your cursor is on
+opt.cursorline = true
+
+-- Enable mouse mode, can be useful for resizing splits for example!
+opt.mouse = "a"
+
+-- Don't show the mode, since it's already in the status line
+opt.showmode = false
+
+-- limit number of shown completion items
+opt.pumheight = 10
 
 -- split windows
 opt.splitright = true -- split vertical window to the right
