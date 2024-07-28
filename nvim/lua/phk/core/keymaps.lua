@@ -6,6 +6,10 @@ local keymap = vim.keymap
 keymap.set({ "n", "v" }, "H", "0")
 keymap.set({ "n", "v" }, "L", "$")
 
+-- delete to black hole register
+keymap.set({ "n", "v" }, "x", '"_x')
+keymap.set({ "n", "v" }, "d", '"_d')
+
 -- manage splits
 keymap.set("n", "<leader>v", "<C-w>v")
 keymap.set("n", "<leader>h", "<C-w>s")
