@@ -1,3 +1,4 @@
-require("phk.core")
-require("phk.lazy")
-vim.cmd("colorscheme catppuccin")
+require('config.keymaps')
+require('config.autocmds')
+require('config.options')
+require('config.lazy')
