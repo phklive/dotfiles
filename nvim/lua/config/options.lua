@@ -56,3 +56,6 @@ opt.pumheight = 10
 -- split windows
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
+
+-- markdown
+vim.g.markdown_fenced_languages = { "python", "javascript", "typescript", "bash", "lua", "go", "rust", "c", "cpp" }

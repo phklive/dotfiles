@@ -31,3 +31,7 @@ keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decremen
 
 -- manage zen mode
 keymap.set("n", "<leader>tz", "<cmd>ZenMode | PencilToggle<cr>")
+
+-- SnipRun
+keymap.set("n", "<Leader>r", ":SnipRun<CR>")
+keymap.set("v", "<Leader>r", ":'<,'>SnipRun<CR>")

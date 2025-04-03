@@ -27,11 +27,20 @@ return {
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
 			ensure_installed = {
+				"rust_analyzer",
+				"ts_ls",
 				"html",
 				"cssls",
 				"tailwindcss",
 				"lua_ls",
 				"pyright",
+			},
+			handlers = {
+				function(server_name)
+					if server_name ~= "rust_analyzer" then
+						require("lspconfig")[server_name].setup({})
+					end
+				end,
 			},
 		})
 
